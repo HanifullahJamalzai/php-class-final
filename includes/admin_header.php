@@ -1,10 +1,13 @@
 <?php
 session_start();
 include_once "../config/main.php"; 
+include "../database/Db.php";
+
 if(!$_SESSION['email']){
     $login_page =  base_url()."/admin/login.php";
     header("location: $login_page");
 }
+
 ?>
 
 <!DOCTYPE html>

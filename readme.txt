@@ -1,6 +1,6 @@
 Note:
 This project is created using PHP For Students
-
+Link: https://github.com/HanifullahJamalzai/php-class-final
 
 =========== 
 1. Template Customization
@@ -11,3 +11,8 @@ This project is created using PHP For Students
 2. Session added to not let all users to access Dashboard
 
 
+================== 21/Dec/2022
+1. Validation
+2. md5 password encryption
+3. database creation and Connection 
+4. Authentication 
