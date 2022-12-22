@@ -57,7 +57,7 @@ if(!$_SESSION['email']){
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -84,7 +84,7 @@ if(!$_SESSION['email']){
                                 Home
                             </a>
                             
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="contact.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Contact
                             </a>
