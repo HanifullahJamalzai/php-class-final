@@ -15,6 +15,7 @@
 </div>
 
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+        <script src="<?php echo base_url(); ?>/assets/admin/js/fontawesome.js"></script>
         <script src="<?php echo base_url(); ?>/assets/admin/js/bootstrap.bundle.min.js"></script>
         <script src="<?php echo base_url(); ?>/assets/admin/js/scripts.js"></script>
         <script src="<?php echo base_url(); ?>/assets/admin/js/chart.min.js"></script>
