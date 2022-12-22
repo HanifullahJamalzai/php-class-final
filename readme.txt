@@ -19,4 +19,7 @@ Link: https://github.com/HanifullahJamalzai/php-class-final
 
 
 ================== 22/Dec/2022
-1. 
+1. All CDNs changed to offline 
+2. Logout added to project
+3. Contact message Send successfully
+4. 

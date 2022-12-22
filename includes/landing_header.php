@@ -1,5 +1,6 @@
 <?php
 include('config/main.php');
+include "./database/Db.php";
 ?>
 
 <!DOCTYPE html>
