@@ -16,3 +16,7 @@ Link: https://github.com/HanifullahJamalzai/php-class-final
 2. md5 password encryption
 3. database creation and Connection 
 4. Authentication 
+
+
+================== 22/Dec/2022
+1. 

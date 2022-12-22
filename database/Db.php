@@ -1,10 +1,7 @@
 <?php
 
-$db = mysqli_connect("localhost", "root", "", "php_final");
-
-if(!$db){
-    echo "You are Not Connected with DB";
-}
+// connection
+include_once "connect.php";
 
 // This file include authentication
 include_once "auth.php";

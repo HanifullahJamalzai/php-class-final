@@ -98,7 +98,8 @@ if(!$_SESSION['email']){
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Profile
                             </a>
-                            <a class="nav-link" href="#">
+                            
+                            <a class="nav-link" href="index.php?logout">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Logout
                             </a>
