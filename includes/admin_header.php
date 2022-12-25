@@ -72,14 +72,14 @@ if(!$_SESSION['email']){
                             
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-sidenav-light.html">All Posts</a>
-                                    <a class="nav-link" href="layout-static.html">Add New Post</a>
+                                    <a class="nav-link" href="posts.php">All Posts</a>
+                                    <a class="nav-link" href="post_form.php">Add Post</a>
                                 </nav>
                             </div>
                             
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="home.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Home
                             </a>
@@ -89,21 +89,23 @@ if(!$_SESSION['email']){
                                 Contact
                             </a>
                             
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="about.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 About
                             </a>
 
                             
                             <div class="sb-sidenav-menu-heading">Personal</div>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="profile.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Profile
                             </a>
                             
                             <a class="nav-link" href="index.php?logout">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Logout
+                                <div class="sb-nav-link-icon text-danger" style="border: 1px solid gray; padding: 0.5em 1em; border-radius: 5px;">
+                                <i class="fas fa-right-from-bracket"></i>
+                                    Logout
+                                </div>
                             </a>
                         </div>
                     </div>
