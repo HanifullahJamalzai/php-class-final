@@ -30,4 +30,9 @@ HomeWork:
 
 ================== 25/Dec/2022
 1. Some UI done for Admin Dashboard
-2. 
+2. Profile data loaded 
+    HomeWork: Complete Rest of the Profile 
+        1.Update User. 
+        2.Photo upload.
+3.
+

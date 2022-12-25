@@ -34,7 +34,7 @@ if(isset($_POST['register']))
     }
 }
 
-if(isset($_POST['login']))
+else if(isset($_POST['login']))
 {
     // storing data in variables
     $email = htmlspecialchars($_POST['email']); 
@@ -59,7 +59,11 @@ if(isset($_POST['login']))
     }
 }
 
-if(isset($_GET['logout'])){
+else if(isset($_POST['update_user'])){
+
+}
+
+else if(isset($_GET['logout'])){
     session_destroy();
     header("location: login.php");
 }
