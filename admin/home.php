@@ -5,13 +5,76 @@ $result = mysqli_query($db, $query);
 $row = mysqli_fetch_array($result);
 
 if(isset($_POST['update_home'])){
-    echo 'update method';
+    $title = htmlspecialchars($_POST['title']);
+    $sub_title = htmlspecialchars($_POST['sub_title']);
+
+    if($_FILES['cover_photo']['name']){
+        // Find old photo
+        $query = "SELECT * FROM `home` WHERE id=1";
+        $result = mysqli_query($db, $query);
+        $row = mysqli_fetch_array($result);
+        //delete old photo from directory
+        unlink("../assets//photos/" . $row['cover_photo']);
+        
+
+        // original file name
+        $file_name = $_FILES['cover_photo']['name'];
+        // temporary file location in server
+        $file_tmp = $_FILES['cover_photo']['tmp_name'];
+        
+        // extension
+        $file_ext = explode('.', $file_name);
+        $file_ext = strtolower(end($file_ext));
+
+        // file name
+        $new_file_name = 'home_' . date('Ymd-his') . '_' . rand(10, 10000000) . '.'.$file_ext;
+
+        if(move_uploaded_file($file_tmp, "../assets/photos/${new_file_name}"))
+        {
+            $query = "UPDATE `home` SET `title`='$title',`sub_title`='$sub_title', `cover_photo`='$new_file_name' WHERE id=1";
+            $result = mysqli_query($db, $query);
+            if($result){
+                $location = base_url() . "/admin/home.php";
+                header("location: $location");
+            }
+        }
+
+    }else{
+        $query = "UPDATE `home` SET `title`='$title',`sub_title`='$sub_title' WHERE id=1";
+        $result = mysqli_query($db, $query);
+        $location = base_url()."/admin/home.php";
+        header("Location: home.php");
+    }
 
 }else if(isset($_POST['store_home'])){
     $title = htmlspecialchars($_POST['title']);
     $sub_title = htmlspecialchars($_POST['sub_title']);
     $cover_photo = $_FILES['cover_photo'];
-    
+
+    if($_FILES['cover_photo']['name']){
+        // original file name
+        $file_name = $_FILES['cover_photo']['name'];
+        // temporary file location in server
+        $file_tmp = $_FILES['cover_photo']['tmp_name'];
+        
+        // extension
+        $file_ext = explode('.', $file_name);
+        $file_ext = strtolower(end($file_ext));
+
+        // file name
+        $new_file_name = 'home_' . date('Ymd-his') . '_' . rand(10, 10000000) . '.'.$file_ext;
+
+        if(move_uploaded_file($file_tmp, "../assets/photos/${new_file_name}"))
+        {
+            $query = "UPDATE `home` SET `title`='$title',`sub_title`='$sub_title', `cover_photo`='$new_file_name' WHERE id=1";
+            $result = mysqli_query($db, $query);
+            if($result){
+                $location = base_url() . "/admin/home.php";
+                header("location: $location");
+            }
+        }
+
+    };
 }
 
 ?>
