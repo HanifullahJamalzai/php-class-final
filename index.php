@@ -1,16 +1,20 @@
 <?php
-include_once("./includes/landing_header.php")
+include_once("./includes/landing_header.php");
+$query = "SELECT * FROM `home` WHERE 1";
+$result = mysqli_query($db, $query);
+$row = mysqli_fetch_array($result);
+
 ?>
 		<header
 			class="masthead"
-			style="background-image: url('<?php echo base_url(); ?>/assets/landing/assets/img/home-bg.jpg')"
+			style="background-image: url('<?php echo base_url().'/assets/photos/'.$row['cover_photo']; ?>')"
 		>
 			<div class="container position-relative px-4 px-lg-5">
 				<div class="row gx-4 gx-lg-5 justify-content-center">
 					<div class="col-md-10 col-lg-8 col-xl-7">
 						<div class="site-heading">
-							<h1>Clean Blog</h1>
-							<span class="subheading">A Blog Theme by Start Bootstrap</span>
+							<h1><?php echo $row['title']; ?></h1>
+							<span class="subheading"><?php echo $row['sub_title'] ?></span>
 						</div>
 					</div>
 				</div>

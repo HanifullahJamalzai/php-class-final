@@ -33,17 +33,17 @@ if(isset($_POST['update_home'])){
         {
             $query = "UPDATE `home` SET `title`='$title',`sub_title`='$sub_title', `cover_photo`='$new_file_name' WHERE id=1";
             $result = mysqli_query($db, $query);
-            if($result){
-                $location = base_url() . "/admin/home.php";
-                header("location: $location");
-            }
+            // if($result){
+            //     $location = base_url() . "/admin/home.php";
+            //     // header("location: $location");
+            // }
         }
 
     }else{
         $query = "UPDATE `home` SET `title`='$title',`sub_title`='$sub_title' WHERE id=1";
         $result = mysqli_query($db, $query);
-        $location = base_url()."/admin/home.php";
-        header("Location: home.php");
+        // $location = base_url()."/admin/home.php";
+        // header("Location: home.php");
     }
 
 }else if(isset($_POST['store_home'])){
@@ -68,10 +68,10 @@ if(isset($_POST['update_home'])){
         {
             $query = "UPDATE `home` SET `title`='$title',`sub_title`='$sub_title', `cover_photo`='$new_file_name' WHERE id=1";
             $result = mysqli_query($db, $query);
-            if($result){
-                $location = base_url() . "/admin/home.php";
-                header("location: $location");
-            }
+            // if($result){
+            //     $location = base_url() . "/admin/home.php";
+            //     header("location: $location");
+            // }
         }
 
     };
